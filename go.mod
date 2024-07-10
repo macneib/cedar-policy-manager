@@ -1,4 +1,4 @@
-module cedar-policy-manager
+module github.com/macneib/cedar-policy-manager
 
 go 1.21.3
 
