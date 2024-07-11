@@ -1,0 +1,4 @@
+db:
+  user: "youruser"
+  name: "yourdb"
+  sslmode: "disable"

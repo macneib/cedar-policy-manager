@@ -1,4 +1,4 @@
-package worker
+package workflows
 
 import (
 	"time"
@@ -13,7 +13,7 @@ func ManageCedarPolicyWorkflow(ctx workflow.Context, tenantID string, policyName
 	ctx = workflow.WithActivityOptions(ctx, ao)
 
 	var result string
-	err := workflow.ExecuteActivity(ctx, CreatePolicyActivity, tenantID, policyName, policyDocument).Get(ctx, &result)
+	err := workflow.ExecuteActivity(ctx, "CreatePolicyActivity", tenantID, policyName, policyDocument).Get(ctx, &result)
 	if err != nil {
 		return err
 	}
