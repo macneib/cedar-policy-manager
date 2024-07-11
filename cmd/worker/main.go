@@ -1,17 +1,17 @@
-package main
+package worker
 
 import (
 	"log"
 
-	"cedar-policy-manager/pkg/activities"
-	"cedar-policy-manager/pkg/db"
-	"cedar-policy-manager/pkg/workflows"
+	"github.com/macneib/cedar-policy-manager/pkg/activities"
+	"github.com/macneib/cedar-policy-manager/pkg/db"
+	"github.com/macneib/cedar-policy-manager/pkg/workflows"
 
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
 )
 
-func main() {
+func StartWorker() {
 	c, err := client.Dial(client.Options{})
 	if err != nil {
 		log.Fatal(err)

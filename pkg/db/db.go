@@ -6,7 +6,7 @@ import (
 )
 
 func InitDB() (*sqlx.DB, error) {
-	db, err := sqlx.Connect("postgres", "user=youruser dbname=yourdb sslmode=disable")
+	db, err := sqlx.Connect("postgres", "user=cpm dbname=cpm sslmode=disable")
 	if err != nil {
 		return nil, err
 	}

@@ -1,4 +1,4 @@
 db:
-  user: "youruser"
-  name: "yourdb"
+  user: "cpm"
+  name: "cpm"
   sslmode: "disable"
